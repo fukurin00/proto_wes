@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package proto_wes;
+
+option go_package="example.com/synerex/proto_wes";
+
+import "google/protobuf/timestamp.proto";
+
+message MQTTRecord {
+    string topic = 1;
+    google.protobuf.Timestamp time = 2;
+    bytes record = 3;
+}
+
+message CLIRecord {
+    string cmd = 1;
+    int32 amr_id = 2;
+    int32 route_id =3;
+    google.protobuf.Timestamp time = 4;
+    bytes record = 5;
+}
+
+message WMSRecord {
+    int32 order_id = 1;
+    google.protobuf.Timestamp time = 2;
+    bytes record = 3;
+}
+
+message AMRRecord{
+    string topic=1;
+    google.protobuf.Timestamp time = 2;
+    bytes record = 3;
+}
