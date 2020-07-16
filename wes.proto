@@ -14,14 +14,14 @@ message MQTTRecord {
 
 message CLIRecord {
     string cmd = 1;
-    int32 amr_id = 2;
-    int32 route_id =3;
+    int32 amrID = 2;
+    int32 routeID =3;
     google.protobuf.Timestamp time = 4;
     bytes record = 5;
 }
 
 message WMSRecord {
-    int32 order_id = 1;
+    int32 orderID = 1;
     google.protobuf.Timestamp time = 2;
     bytes record = 3;
 }
